@@ -5,6 +5,9 @@ const weekDayElement = document.getElementById('weekday');
 const dayElement = document.getElementById('day');
 const monthElement = document.getElementById('month');
 const yearElement = document.getElementById('year');
+const minutesAnalogicElement = document.getElementById('sec-a');
+const toChangeStyles = document.documentElement.style;
+
 const week = [
   'Sunday',
   'Monday',
@@ -14,7 +17,6 @@ const week = [
   'Friday',
   'Saturday',
 ];
-
 const allMonths = [
   'January',
   'February',
@@ -50,3 +52,17 @@ const setDigital = () => {
 setInterval(setDigital, 1000);
 
 //analógico
+
+const setAnalogic = () => {
+  const date = new Date();
+  const seconds = date.getSeconds();
+  const minutes = date.getMinutes();
+  const hours = date.getHours();
+  toChangeStyles.setProperty('--seconds-rotation', seconds * 6 + 'deg');
+  toChangeStyles.setProperty(
+    '--minutes-rotation',
+    minutes * (360 / 60) + 'deg'
+  );
+  toChangeStyles.setProperty('--hours-rotation', hours * (360 / 12) + 'deg');
+};
+setInterval(setAnalogic, 1000);

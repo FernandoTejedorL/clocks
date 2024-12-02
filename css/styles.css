@@ -1,64 +1,7 @@
 :root {
-  --set0: ;
-  --set1: ;
-  --set2: ;
-  --set3: ;
-  --set4: ;
-  --set5: ;
-  --set6: ;
-  --set7: ;
-  --set8: ;
-  --set9: ;
-  --set10: ;
-  --set11: ;
-  --set12: ;
-  --set13: ;
-  --set14: ;
-  --set15: ;
-  --set16: ;
-  --set17: ;
-  --set18: ;
-  --set19: ;
-  --set20: ;
-  --set21: ;
-  --set22: ;
-  --set23: ;
-  --set24: ;
-  --set25: ;
-  --set26: ;
-  --set27: ;
-  --set28: ;
-  --set29: ;
-  --set30: ;
-  --set31: ;
-  --set32: ;
-  --set33: ;
-  --set34: ;
-  --set35: ;
-  --set36: ;
-  --set37: ;
-  --set38: ;
-  --set39: ;
-  --set40: ;
-  --set41: ;
-  --set42: ;
-  --set43: ;
-  --set44: ;
-  --set45: ;
-  --set46: ;
-  --set47: ;
-  --set48: ;
-  --set49: ;
-  --set50: ;
-  --set51: ;
-  --set52: ;
-  --set53: ;
-  --set54: ;
-  --set55: ;
-  --set56: ;
-  --set57: ;
-  --set58: ;
-  --set59: ;
+  --seconds-rotation: 0deg;
+  --minutes-rotation: 0deg;
+  --hours-rotation: 0deg;
 }
 
 * {
@@ -88,11 +31,10 @@ ul {
 
 body {
   margin: 0;
-  font-family: 'Protest Revolution', sans-serif;
+  font-family: 'Edu AU VIC WA NT Arrows', cursive;
 }
 
 .main {
-  width: 99vw;
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -121,36 +63,42 @@ body {
 
 .hour-a {
   position: absolute;
-  left: 125px;
-  top: 147px;
-  height: 5px;
-  width: 150px;
-  background-image: linear-gradient(to right, transparent 50%, black 50%);
-  rotate: 270deg;
+  left: 197px;
+  top: 73px;
+  height: 150px;
+  width: 5px;
+  background-image: linear-gradient(
+    to top,
+    transparent 50%,
+    rgb(20, 179, 214) 50%
+  );
+  rotate: var(--hours-rotation);
 }
 
 .min-a {
   position: absolute;
-  left: 116px;
-  top: 148px;
-  height: 3px;
-  width: 170px;
+  left: 200px;
+  top: 65px;
+  height: 170px;
+  width: 3px;
   background-image: linear-gradient(
-    to right,
+    to top,
     transparent 50%,
-    rgb(52, 40, 52) 50%
+    rgb(192, 31, 192) 50%
   );
+  rotate: var(--minutes-rotation);
 }
 
 .seg-a {
   position: absolute;
-  left: 111px;
-  top: 149px;
-  height: 1px;
-  width: 180px;
+  left: 200px;
+  top: 58px;
+  height: 180px;
+  width: 1px;
   background-image: linear-gradient(
-    to right,
+    to top,
     transparent 50%,
     rgb(231, 20, 20) 50%
   );
+  rotate: var(--seconds-rotation);
 }
