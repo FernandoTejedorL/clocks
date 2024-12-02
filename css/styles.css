@@ -126,6 +126,7 @@ body {
   height: 5px;
   width: 150px;
   background-image: linear-gradient(to right, transparent 50%, black 50%);
+  rotate: 270deg;
 }
 
 .min-a {
