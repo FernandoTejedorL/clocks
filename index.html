@@ -3,10 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Document</title>
+    <title>Clocks</title>
   </head>
   <body>
+    <main class="main">
+      <div class="digital">
+        <span><span id="hour-d">HH</span> : <span id="min-d">MM</span></span>
+        <span>
+          <span id="weekday"></span> <span id="day"></span>
+          <span id="month"></span>
+          <span id="year"></span>
+        </span>
+      </div>
+      <div class="analogic">
+        <div class="hour-a"></div>
+        <div class="min-a"></div>
+        <div class="seg-a"></div>
+      </div>
+    </main>
     <script src="./js/scripts.js"></script>
   </body>
 </html>

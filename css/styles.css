@@ -1,5 +1,64 @@
 :root {
-  --bg-color: blue;
+  --set0: ;
+  --set1: ;
+  --set2: ;
+  --set3: ;
+  --set4: ;
+  --set5: ;
+  --set6: ;
+  --set7: ;
+  --set8: ;
+  --set9: ;
+  --set10: ;
+  --set11: ;
+  --set12: ;
+  --set13: ;
+  --set14: ;
+  --set15: ;
+  --set16: ;
+  --set17: ;
+  --set18: ;
+  --set19: ;
+  --set20: ;
+  --set21: ;
+  --set22: ;
+  --set23: ;
+  --set24: ;
+  --set25: ;
+  --set26: ;
+  --set27: ;
+  --set28: ;
+  --set29: ;
+  --set30: ;
+  --set31: ;
+  --set32: ;
+  --set33: ;
+  --set34: ;
+  --set35: ;
+  --set36: ;
+  --set37: ;
+  --set38: ;
+  --set39: ;
+  --set40: ;
+  --set41: ;
+  --set42: ;
+  --set43: ;
+  --set44: ;
+  --set45: ;
+  --set46: ;
+  --set47: ;
+  --set48: ;
+  --set49: ;
+  --set50: ;
+  --set51: ;
+  --set52: ;
+  --set53: ;
+  --set54: ;
+  --set55: ;
+  --set56: ;
+  --set57: ;
+  --set58: ;
+  --set59: ;
 }
 
 * {
@@ -29,5 +88,68 @@ ul {
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Protest Revolution', sans-serif;
+}
+
+.main {
+  width: 99vw;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.digital {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  font-size: 40px;
+}
+
+.analogic {
+  position: relative;
+  background-image: url(../assets/images/clock.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 300px;
+  width: 400px;
+}
+
+.hour-a {
+  position: absolute;
+  left: 125px;
+  top: 147px;
+  height: 5px;
+  width: 150px;
+  background-image: linear-gradient(to right, transparent 50%, black 50%);
+}
+
+.min-a {
+  position: absolute;
+  left: 116px;
+  top: 148px;
+  height: 3px;
+  width: 170px;
+  background-image: linear-gradient(
+    to right,
+    transparent 50%,
+    rgb(52, 40, 52) 50%
+  );
+}
+
+.seg-a {
+  position: absolute;
+  left: 111px;
+  top: 149px;
+  height: 1px;
+  width: 180px;
+  background-image: linear-gradient(
+    to right,
+    transparent 50%,
+    rgb(231, 20, 20) 50%
+  );
 }
