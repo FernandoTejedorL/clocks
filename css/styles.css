@@ -63,7 +63,7 @@ body {
 
 .hour-a {
   position: absolute;
-  left: 197px;
+  left: 199px;
   top: 73px;
   height: 150px;
   width: 5px;
@@ -101,4 +101,15 @@ body {
     rgb(231, 20, 20) 50%
   );
   rotate: var(--seconds-rotation);
+}
+
+.screw {
+  content: '';
+  position: absolute;
+  top: 142px;
+  left: 193px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-image: linear-gradient(#f011cb, #d2f922);
 }

@@ -1,4 +1,3 @@
-const rootStyles = document.documentElement.style;
 const hourDigiElement = document.getElementById('hour-d');
 const minDigiElement = document.getElementById('min-d');
 const weekDayElement = document.getElementById('weekday');
@@ -32,15 +31,7 @@ const allMonths = [
   'December',
 ];
 
-const setTwoDigits = (number) => {
-  if (number < 10) {
-    number = `0${number}`;
-  }
-  return number;
-};
-
-const result = setTwoDigits(11);
-console.log(result);
+const setTwoDigits = (number) => (number < 10 ? `0${number}` : number);
 
 const setClocks = () => {
   const date = new Date();
@@ -53,7 +44,7 @@ const setClocks = () => {
   const year = date.getFullYear();
   hourDigiElement.textContent = setTwoDigits(hours);
   minDigiElement.textContent = setTwoDigits(minutes);
-  dayElement.textContent = day;
+  dayElement.textContent = setTwoDigits(day);
   weekDayElement.textContent = weekDay;
   monthElement.textContent = month;
   yearElement.textContent = year;
