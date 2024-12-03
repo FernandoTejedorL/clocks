@@ -32,32 +32,31 @@ const allMonths = [
   'December',
 ];
 
-// Digital
-
-const setDigital = () => {
-  const date = new Date();
-  const minutes = date.getMinutes();
-  const hour = date.getHours();
-  const day = date.getDate();
-  const weekDay = week[date.getDay()];
-  const month = allMonths[date.getMonth()];
-  const year = date.getFullYear();
-  hourDigiElement.textContent = hour;
-  minDigiElement.textContent = minutes;
-  dayElement.textContent = day;
-  weekDayElement.textContent = weekDay;
-  monthElement.textContent = month;
-  yearElement.textContent = year;
+const setTwoDigits = (number) => {
+  if (number < 10) {
+    number = `0${number}`;
+  }
+  return number;
 };
-setInterval(setDigital, 1000);
 
-//analógico
+const result = setTwoDigits(11);
+console.log(result);
 
-const setAnalogic = () => {
+const setClocks = () => {
   const date = new Date();
   const seconds = date.getSeconds();
   const minutes = date.getMinutes();
   const hours = date.getHours();
+  const day = date.getDate();
+  const weekDay = week[date.getDay()];
+  const month = allMonths[date.getMonth()];
+  const year = date.getFullYear();
+  hourDigiElement.textContent = setTwoDigits(hours);
+  minDigiElement.textContent = setTwoDigits(minutes);
+  dayElement.textContent = day;
+  weekDayElement.textContent = weekDay;
+  monthElement.textContent = month;
+  yearElement.textContent = year;
   toChangeStyles.setProperty('--seconds-rotation', seconds * 6 + 'deg');
   toChangeStyles.setProperty(
     '--minutes-rotation',
@@ -68,4 +67,4 @@ const setAnalogic = () => {
     hours * (360 / 12) + (30 / 60) * minutes + 'deg'
   );
 };
-setInterval(setAnalogic, 1000);
+setInterval(setClocks, 1000);
