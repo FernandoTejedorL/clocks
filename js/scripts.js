@@ -63,6 +63,9 @@ const setAnalogic = () => {
     '--minutes-rotation',
     minutes * (360 / 60) + 'deg'
   );
-  toChangeStyles.setProperty('--hours-rotation', hours * (360 / 12) + 'deg');
+  toChangeStyles.setProperty(
+    '--hours-rotation',
+    hours * (360 / 12) + (30 / 60) * minutes + 'deg'
+  );
 };
 setInterval(setAnalogic, 1000);
